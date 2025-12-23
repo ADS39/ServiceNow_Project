@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="ae4d9760c3c6f6504620e04bb001319e" label="Investment Portfolio" max_length="40" name="x_1285971_wealth_m_portfolio" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="balanced" label="Portfolio Type" max_length="40" name="portfolio_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Balanced" sequence="3" value="balanced"/>
+                <element inactive_on_update="false" label="Retirement" sequence="0" value="retirement"/>
+                <element inactive_on_update="false" label="Speculative" sequence="4" value="speculative"/>
+                <element inactive_on_update="false" label="Growth" sequence="1" value="growth"/>
+                <element inactive_on_update="false" label="Income" sequence="2" value="income"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Portfolio Inception Date" mandatory="true" max_length="40" name="inception_date" type="glide_date"/>
+        <element default="5" label="Rebalance Threshold (%)" max_length="40" name="rebalance_threshold" type="integer"/>
+        <element label="1-Year Performance (%)" max_length="8" name="performance_1yr" type="decimal"/>
+        <element label="Suitability Score (1-100)" max_length="40" name="suitability_score" type="integer"/>
+        <element label="YTD Performance (%)" max_length="8" name="performance_ytd" type="decimal"/>
+        <element default="true" label="Auto-Rebalance Enabled" max_length="40" name="auto_rebalance" type="boolean"/>
+        <element default="0.00" label="Total Portfolio Value (USD)" max_length="20" name="total_value" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Rebalanced" max_length="40" name="last_rebalanced" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="active" label="Portfolio Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Rebalancing" sequence="2" value="rebalancing"/>
+                <element inactive_on_update="false" label="Closed" sequence="3" value="closed"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Suspended" sequence="4" value="suspended"/>
+                <element inactive_on_update="false" label="Under Review" sequence="1" value="under_review"/>
+            </choice>
+        </element>
+        <element label="3-Year Performance (%)" max_length="8" name="performance_3yr" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Portfolio Name" mandatory="true" max_length="200" name="portfolio_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="Stocks: 60%, Bonds: 30%, Cash: 10%" label="Target Asset Allocation" max_length="1000" name="target_asset_allocation" type="string"/>
+        <element default="0.00" label="Cash Balance (USD)" max_length="15" name="cash_balance" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Next Rebalance Due" max_length="40" name="next_rebalance_due" type="glide_date"/>
+        <element attributes="encode_utf8=false" label="Assigned Advisor" mandatory="true" max_length="32" name="advisor" reference="sys_user" type="reference"/>
+        <element label="5-Year Performance (%)" max_length="8" name="performance_5yr" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="S&amp;P 500" label="Benchmark Index" max_length="100" name="benchmark_index" type="string"/>
+        <element default="0.00" label="YTD Fees (USD)" max_length="12" name="fees_ytd" type="decimal"/>
+        <element attributes="encode_utf8=false" label="Client" mandatory="true" max_length="32" name="client" reference="x_1285971_wealth_m_client" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Current Asset Allocation" max_length="1000" name="actual_asset_allocation" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="quarterly" label="Rebalance Frequency" max_length="40" name="rebalance_frequency" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Threshold-Based" sequence="4" value="threshold_based"/>
+                <element inactive_on_update="false" label="Monthly" sequence="0" value="monthly"/>
+                <element inactive_on_update="false" label="Quarterly" sequence="1" value="quarterly"/>
+                <element inactive_on_update="false" label="Semi-Annual" sequence="2" value="semi_annual"/>
+                <element inactive_on_update="false" label="Annual" sequence="3" value="annual"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="advisor"/>
+        </index>
+        <index name="index2">
+            <element name="client"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="risk_tolerance" table="x_1285971_wealth_m_client" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>risk_tolerance</element>
+            <name>x_1285971_wealth_m_client</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:25</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>risk_tolerance</sys_name>
+            <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+            <sys_update_name>sys_choice_x_1285971_wealth_m_client_risk_tolerance</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:25</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>risk_tolerance</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Conservative</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_client</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:25</sys_updated_on>
+            <value>conservative</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>risk_tolerance</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Moderate</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_client</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:25</sys_updated_on>
+            <value>moderate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>risk_tolerance</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aggressive</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_client</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:25</sys_updated_on>
+            <value>aggressive</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

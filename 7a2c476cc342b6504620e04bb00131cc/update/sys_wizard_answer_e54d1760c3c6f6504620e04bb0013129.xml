@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Wealth Management Workflow Task</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Wealth Management Workflow Task</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">2cbb217ef13322108bb2efdbde054c8b</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-23 08:30:26</sys_created_on>
+        <sys_id>e54d1760c3c6f6504620e04bb0013129</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Wealth Management Workflow Task</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_wizard_answer_e54d1760c3c6f6504620e04bb0013129</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-23 08:30:26</sys_updated_on>
+        <table/>
+        <target_url>x_1285971_wealth_m_workflow_task.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

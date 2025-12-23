@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { gs, GlideDateTime, GlideRecord } from '@servicenow/glide'
+
+// Calculate portfolio performance and allocation percentages
+export function calculatePortfolioMetrics(current, previous) {
+    const portfolioId = current.getValue('sys_id');
+    
+    // Calculate total portfolio value from holdings
+    const holdingsGr = new GlideRecord('x_1285971_wealth_m_holding');
+    holdingsGr.addQuery('portfolio', portfolioId);
+    holdingsGr.query();
+    
+    let totalValue = 0;
+    let totalCostBasis = 0;
+    const assetClasses = {};
+    
+    while (holdingsGr.next()) {
+        const marketValue = parseFloat(holdingsGr.getValue('current_market_value') || 0);
+        const costBasis = parseFloat(holdingsGr.getValue('total_cost_basis') || 0);
+        const assetClass = holdingsGr.getValue('asset_class');
+        
+        totalValue += marketValue;
+        totalCostBasis += costBasis;
+        
+        if (!assetClasses[assetClass]) {
+            assetClasses[assetClass] = 0;
+        }
+        assetClasses[assetClass] += marketValue;
+    }
+    
+    // Update portfolio totals
+    current.setValue('total_value', totalValue.toFixed(2));
+    
+    // Calculate actual asset allocation
+    let allocationStr = '';
+    for (const [assetClass, value] of Object.entries(assetClasses)) {
+        const percentage = totalValue > 0 ? ((value / totalValue) * 100).toFixed(1) : 0;
+        allocationStr += assetClass + ': ' + percentage + '%, ';
+    }
+    current.setValue('actual_asset_allocation', allocationStr.slice(0, -2));
+    
+    gs.addInfoMessage('Portfolio metrics updated - Total Value: $' + totalValue.toFixed(2));
+}
+
+// Check rebalancing thresholds and create alerts
+export function checkRebalanceThresholds(current, previous) {
+    const portfolioId = current.getValue('sys_id');
+    const threshold = parseInt(current.getValue('rebalance_threshold') || 5);
+    const targetAllocation = current.getValue('target_asset_allocation');
+    const actualAllocation = current.getValue('actual_asset_allocation');
+    
+    if (gs.nil(targetAllocation) || gs.nil(actualAllocation)) {
+        return;
+    }
+    
+    // Parse allocations (simplified - assumes "AssetClass: XX%" format)
+    const targetMap = parseAllocation(targetAllocation);
+    const actualMap = parseAllocation(actualAllocation);
+    
+    let rebalanceNeeded = false;
+    let maxDeviation = 0;
+    let deviatingAsset = '';
+    
+    for (const [assetClass, targetPct] of Object.entries(targetMap)) {
+        const actualPct = actualMap[assetClass] || 0;
+        const deviation = Math.abs(targetPct - actualPct);
+        
+        if (deviation > threshold) {
+            rebalanceNeeded = true;
+            if (deviation > maxDeviation) {
+                maxDeviation = deviation;
+                deviatingAsset = assetClass;
+            }
+        }
+    }
+    
+    if (rebalanceNeeded) {
+        createRebalanceAlert(portfolioId, maxDeviation, deviatingAsset, threshold);
+    }
+}
+
+// Generate next rebalance due date
+export function setNextRebalanceDate(current, previous) {
+    const frequency = current.getValue('rebalance_frequency');
+    const lastRebalanced = current.getValue('last_rebalanced');
+    
+    if (gs.nil(lastRebalanced)) {
+        return;
+    }
+    
+    const lastDate = new GlideDateTime();
+    lastDate.setDisplayValue(lastRebalanced);
+    
+    let nextDate = new GlideDateTime(lastDate);
+    
+    switch (frequency) {
+        case 'monthly':
+            nextDate.addMonths(1);
+            break;
+        case 'quarterly':
+            nextDate.addMonths(3);
+            break;
+        case 'semi_annual':
+            nextDate.addMonths(6);
+            break;
+        case 'annual':
+            nextDate.addYears(1);
+            break;
+        default:
+            return; // threshold_based doesn't use scheduled dates
+    }
+    
+    current.setValue('next_rebalance_due', nextDate.getDisplayValue().split(' ')[0]);
+}
+
+// Helper function to parse allocation strings
+function parseAllocation(allocationStr) {
+    const map = {};
+    if (gs.nil(allocationStr)) return map;
+    
+    const parts = allocationStr.split(',');
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i].trim();
+        const colonIndex = part.indexOf(':');
+        const percentIndex = part.indexOf('%');
+        
+        if (colonIndex > 0 && percentIndex > colonIndex) {
+            const assetClass = part.substring(0, colonIndex).trim().toLowerCase();
+            const percentage = parseFloat(part.substring(colonIndex + 1, percentIndex).trim());
+            map[assetClass] = percentage;
+        }
+    }
+    return map;
+}
+
+// Helper function to create rebalance alerts
+function createRebalanceAlert(portfolioId, deviation, assetClass, threshold) {
+    const alertGr = new GlideRecord('x_1285971_wealth_m_alert');
+    alertGr.initialize();
+    alertGr.setValue('alert_type', 'rebalance_threshold');
+    alertGr.setValue('priority', deviation > 10 ? 'high' : 'medium');
+    alertGr.setValue('portfolio', portfolioId);
+    alertGr.setValue('title', 'Rebalance Threshold Exceeded');
+    alertGr.setValue('description', 'Asset class "' + assetClass + '" has deviated ' + 
+                    deviation.toFixed(1) + '% from target allocation, exceeding threshold of ' + threshold + '%');
+    alertGr.setValue('threshold_value', threshold);
+    alertGr.setValue('deviation_percentage', deviation.toFixed(2));
+    alertGr.setValue('triggered_date', new GlideDateTime().getDisplayValue());
+    alertGr.setValue('status', 'new');
+    alertGr.setValue('action_required', 'rebalance');
+    alertGr.insert();
+    
+    gs.addInfoMessage('Rebalance alert created for portfolio due to ' + assetClass + ' deviation');
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_1285971_wealth_m/x-1285971-wealth-manag/1.0.0/src/server/portfolio-business-logic.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-23 08:30:40</sys_created_on>
+        <sys_id>7afaffdacd0944bba244d0a6b71f2f0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1285971_wealth_m/x-1285971-wealth-manag/1.0.0/src/server/portfolio-business-logic.js</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_module_7afaffdacd0944bba244d0a6b71f2f0e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-23 08:30:40</sys_updated_on>
+    </sys_module>
+</record_update>

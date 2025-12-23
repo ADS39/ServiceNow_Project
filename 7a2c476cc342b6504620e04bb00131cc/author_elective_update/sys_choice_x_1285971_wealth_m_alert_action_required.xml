@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="action_required" table="x_1285971_wealth_m_alert" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>action_required</element>
+            <name>x_1285971_wealth_m_alert</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>action_required</sys_name>
+            <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+            <sys_update_name>sys_choice_x_1285971_wealth_m_alert_action_required</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Rebalance Portfolio</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_alert</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+            <value>rebalance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Review Asset Allocation</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_alert</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+            <value>review_allocation</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Contact Client</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_alert</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+            <value>contact_client</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Compliance Review</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_alert</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+            <value>compliance_check</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Risk Assessment</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_alert</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+            <value>risk_assessment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_required</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>No Action Required</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_alert</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:23</sys_updated_on>
+            <value>no_action</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[{
+  "name": "x-1285971-wealth-manag",
+  "version": "1.0.0",
+  "description": "[BUILD AGENT GENERATED]:  Enterprise wealth management system for managing client portfolios, investment strategies, and financial advisor workflows. Features include automated portfolio rebalancing, threshold monitoring, performance reporting, SLA tracking for compliance, and secure client communication tools with integrations to investment platforms and CRM systems.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "now-sdk build",
+    "deploy": "now-sdk install",
+    "transform": "now-sdk transform",
+    "types": "now-sdk dependencies"
+  },
+  "devDependencies": {
+    "@servicenow/sdk": "4.1.1",
+    "@servicenow/glide": "26.0.1",
+    "eslint": "8.50.0",
+    "@servicenow/eslint-plugin-sdk-app-plugin": "4.1.1"
+  }
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_1285971_wealth_m/x-1285971-wealth-manag/1.0.0/package.json</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-23 08:30:40</sys_created_on>
+        <sys_id>03fec6f26fab41749b43342a847e8c1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1285971_wealth_m/x-1285971-wealth-manag/1.0.0/package.json</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_module_03fec6f26fab41749b43342a847e8c1f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-23 08:30:40</sys_updated_on>
+    </sys_module>
+</record_update>

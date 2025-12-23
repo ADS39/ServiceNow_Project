@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { gs, GlideDateTime } from '@servicenow/glide'
+
+// Generate unique client ID when a new client is created
+export function generateClientId(current, previous) {
+    if (current.isNewRecord() && gs.nil(current.getValue('client_id'))) {
+        // Generate client ID: WM-YYYY-NNNN format
+        const now = new GlideDateTime();
+        const year = now.getDisplayValue().substring(0, 4);
+        
+        // Get next sequence number
+        const gr = new GlideRecord('x_1285971_wealth_m_client');
+        gr.addQuery('client_id', 'STARTSWITH', 'WM-' + year);
+        gr.orderByDesc('client_id');
+        gr.setLimit(1);
+        gr.query();
+        
+        let nextNum = 1;
+        if (gr.next()) {
+            const lastId = gr.getValue('client_id');
+            const lastNum = parseInt(lastId.substring(8)); // Extract number after WM-YYYY-
+            nextNum = lastNum + 1;
+        }
+        
+        const paddedNum = ('0000' + nextNum).slice(-4);
+        const clientId = 'WM-' + year + '-' + paddedNum;
+        
+        current.setValue('client_id', clientId);
+        gs.addInfoMessage('Generated Client ID: ' + clientId);
+    }
+}
+
+// Validate client data completeness
+export function validateClientData(current, previous) {
+    const errors = [];
+    
+    // Email validation
+    const email = current.getValue('email');
+    if (!gs.nil(email)) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            errors.push('Invalid email format');
+        }
+    }
+    
+    // Age validation for investment suitability
+    const dob = current.getValue('date_of_birth');
+    if (!gs.nil(dob)) {
+        const dobDate = new GlideDateTime();
+        dobDate.setDisplayValue(dob);
+        const today = new GlideDateTime();
+        const ageMs = today.getNumericValue() - dobDate.getNumericValue();
+        const age = Math.floor(ageMs / (365 * 24 * 60 * 60 * 1000));
+        
+        if (age < 18) {
+            errors.push('Client must be at least 18 years old');
+        }
+        if (age > 120) {
+            errors.push('Please verify date of birth');
+        }
+    }
+    
+    // Risk tolerance vs experience validation
+    const risk = current.getValue('risk_tolerance');
+    const experience = current.getValue('investment_experience');
+    
+    if (risk === 'aggressive' && (experience === 'beginner' || experience === 'intermediate')) {
+        errors.push('Aggressive risk tolerance may not be suitable for clients with limited investment experience');
+    }
+    
+    if (errors.length > 0) {
+        gs.addErrorMessage('Client validation errors: ' + errors.join('; '));
+        current.setAbortAction(true);
+    }
+}
+
+// Update client status based on portfolio activity
+export function updateClientStatus(current, previous) {
+    const clientId = current.getValue('sys_id');
+    
+    // Count active portfolios for this client
+    const portfolioGr = new GlideRecord('x_1285971_wealth_m_portfolio');
+    portfolioGr.addQuery('client', clientId);
+    portfolioGr.addQuery('status', 'active');
+    portfolioGr.query();
+    
+    const activePortfolios = portfolioGr.getRowCount();
+    
+    // Update client status
+    if (activePortfolios > 0 && current.getValue('status') === 'prospective') {
+        current.setValue('status', 'active');
+        gs.addInfoMessage('Client status updated to Active due to active portfolios');
+    } else if (activePortfolios === 0 && current.getValue('status') === 'active') {
+        current.setValue('status', 'inactive');
+        gs.addInfoMessage('Client status updated to Inactive - no active portfolios');
+    }
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_1285971_wealth_m/x-1285971-wealth-manag/1.0.0/src/server/client-business-logic.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-23 08:30:40</sys_created_on>
+        <sys_id>e4d538ac5cac40ec88680cb811afe170</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1285971_wealth_m/x-1285971-wealth-manag/1.0.0/src/server/client-business-logic.js</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_module_e4d538ac5cac40ec88680cb811afe170</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-23 08:30:40</sys_updated_on>
+    </sys_module>
+</record_update>

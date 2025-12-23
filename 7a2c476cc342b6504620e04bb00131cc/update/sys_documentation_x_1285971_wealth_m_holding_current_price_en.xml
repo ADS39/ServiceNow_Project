@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="current_price" label="Current Price per Share (USD)" language="en" table="x_1285971_wealth_m_holding">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>current_price</element>
+            <help/>
+            <hint/>
+            <label>Current Price per Share (USD)</label>
+            <language>en</language>
+            <name>x_1285971_wealth_m_holding</name>
+            <plural>Current Price per Share (USD)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-23 08:30:26</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Current Price per Share (USD)</sys_name>
+            <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+            <sys_update_name>sys_documentation_x_1285971_wealth_m_holding_current_price_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-23 08:30:26</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

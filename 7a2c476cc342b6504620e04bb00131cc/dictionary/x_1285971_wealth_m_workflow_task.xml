@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="194d1760c3c6f6504620e04bb0013127" extends="task" label="Wealth Management Workflow Task" max_length="40" name="x_1285971_wealth_m_workflow_task" type="collection">
+        <element label="Approval Required" max_length="40" name="approval_required" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Related Client" max_length="32" name="client" reference="x_1285971_wealth_m_client" type="reference"/>
+        <element label="Client Communication Required" max_length="40" name="client_communication_required" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Completion Notes" max_length="1000" name="completion_notes" type="string"/>
+        <element label="Compliance Reviewed" max_length="40" name="compliance_reviewed" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Related Portfolio" max_length="32" name="portfolio" reference="x_1285971_wealth_m_portfolio" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Approval Date" max_length="40" name="approval_date" type="glide_date_time"/>
+        <element default="24" label="SLA Hours" max_length="40" name="sla_hours" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Target Completion Date" max_length="40" name="target_completion" type="glide_date_time"/>
+        <element label="Estimated Value Impact (USD)" max_length="15" name="estimated_value_impact" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="initiated" label="Workflow Stage" max_length="40" name="workflow_stage" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="3" value="approved"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="7" value="cancelled"/>
+                <element inactive_on_update="false" label="Initiated" sequence="0" value="initiated"/>
+                <element inactive_on_update="false" label="Executed" sequence="4" value="executed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="in_progress"/>
+                <element inactive_on_update="false" label="Completed" sequence="5" value="completed"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="2" value="pending_approval"/>
+                <element inactive_on_update="false" label="Rejected" sequence="6" value="rejected"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="low" label="Risk Impact" max_length="40" name="risk_impact" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Medium" sequence="2" value="medium"/>
+                <element inactive_on_update="false" label="High" sequence="3" value="high"/>
+                <element inactive_on_update="false" label="None" sequence="0" value="none"/>
+                <element inactive_on_update="false" label="Critical" sequence="4" value="critical"/>
+                <element inactive_on_update="false" label="Low" sequence="1" value="low"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Workflow Type" mandatory="true" max_length="40" name="workflow_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Document Collection" sequence="7" value="document_collection"/>
+                <element inactive_on_update="false" label="Compliance Check" sequence="3" value="compliance_check"/>
+                <element inactive_on_update="false" label="Suitability Review" sequence="8" value="suitability_review"/>
+                <element inactive_on_update="false" label="Portfolio Creation" sequence="0" value="portfolio_creation"/>
+                <element inactive_on_update="false" label="Risk Assessment" sequence="4" value="risk_assessment"/>
+                <element inactive_on_update="false" label="Portfolio Rebalancing" sequence="1" value="rebalancing"/>
+                <element inactive_on_update="false" label="Performance Review" sequence="5" value="performance_review"/>
+                <element inactive_on_update="false" label="Client Review" sequence="2" value="client_review"/>
+                <element inactive_on_update="false" label="Client Onboarding" sequence="6" value="client_onboarding"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Assigned Advisor" mandatory="true" max_length="32" name="advisor" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Business Justification" max_length="1000" name="business_justification" type="string"/>
+        <element label="Eligible for Automation" max_length="40" name="automation_eligible" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Checklist Items" max_length="2000" name="checklist_items" type="string"/>
+    </element>
+</database>

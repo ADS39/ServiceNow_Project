@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="654d1760c3c6f6504620e04bb0013174" label="Portfolio Holdings" max_length="40" name="x_1285971_wealth_m_holding" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Security Symbol" mandatory="true" max_length="20" name="security_symbol" type="string"/>
+        <element label="Shares/Quantity" mandatory="true" max_length="15" name="shares_quantity" type="decimal"/>
+        <element label="Current Market Value (USD)" max_length="15" name="current_market_value" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Sector" max_length="100" name="sector" type="string"/>
+        <element label="Actual Allocation (%)" max_length="5" name="actual_allocation_pct" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Price Last Updated" max_length="40" name="last_updated" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Maturity Date (for bonds)" max_length="40" name="maturity_date" type="glide_date_time"/>
+        <element label="Cost Basis per Share (USD)" max_length="12" name="cost_basis_per_share" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Security Name" mandatory="true" max_length="200" name="security_name" type="string"/>
+        <element label="Unrealized Gain/Loss (USD)" max_length="15" name="unrealized_gain_loss" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="United States" label="Country" max_length="100" name="country" type="string"/>
+        <element label="Dividend Yield (%)" max_length="6" name="dividend_yield" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Credit Rating" max_length="10" name="rating" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="stock" label="Security Type" max_length="40" name="security_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Mutual Fund" sequence="3" value="mutual_fund"/>
+                <element inactive_on_update="false" label="Option" sequence="7" value="option"/>
+                <element inactive_on_update="false" label="Stock" sequence="0" value="stock"/>
+                <element inactive_on_update="false" label="REIT" sequence="4" value="reit"/>
+                <element inactive_on_update="false" label="Cash Equivalent" sequence="8" value="cash"/>
+                <element inactive_on_update="false" label="Bond" sequence="1" value="bond"/>
+                <element inactive_on_update="false" label="Commodity" sequence="5" value="commodity"/>
+                <element inactive_on_update="false" label="ETF" sequence="2" value="etf"/>
+                <element inactive_on_update="false" label="Cryptocurrency" sequence="6" value="cryptocurrency"/>
+            </choice>
+        </element>
+        <element label="Total Cost Basis (USD)" max_length="15" name="total_cost_basis" type="decimal"/>
+        <element label="Unrealized Gain/Loss (%)" max_length="8" name="unrealized_gain_loss_pct" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="USD" label="Currency" max_length="10" name="currency" type="string"/>
+        <element label="Expense Ratio (%)" max_length="6" name="expense_ratio" type="decimal"/>
+        <element attributes="encode_utf8=false" label="Portfolio" mandatory="true" max_length="32" name="portfolio" reference="x_1285971_wealth_m_portfolio" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="equity" label="Asset Class" max_length="40" name="asset_class" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Cash" sequence="3" value="cash"/>
+                <element inactive_on_update="false" label="Real Estate" sequence="4" value="real_estate"/>
+                <element inactive_on_update="false" label="Equity" sequence="0" value="equity"/>
+                <element inactive_on_update="false" label="Commodities" sequence="5" value="commodities"/>
+                <element inactive_on_update="false" label="Fixed Income" sequence="1" value="fixed_income"/>
+                <element inactive_on_update="false" label="Alternatives" sequence="2" value="alternatives"/>
+            </choice>
+        </element>
+        <element label="Beta" max_length="6" name="beta" type="decimal"/>
+        <element label="Current Price per Share (USD)" max_length="12" name="current_price" type="decimal"/>
+        <element default="0.00" label="Target Allocation (%)" max_length="5" name="target_allocation_pct" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Initial Purchase Date" max_length="40" name="purchase_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="portfolio"/>
+        </index>
+    </element>
+</database>

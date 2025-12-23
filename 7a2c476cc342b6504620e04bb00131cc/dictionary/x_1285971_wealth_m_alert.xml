@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="944d9360c3c6f6504620e04bb0013149" label="Portfolio Alert" max_length="40" name="x_1285971_wealth_m_alert" type="collection">
+        <element attributes="encode_utf8=false" label="Portfolio" mandatory="true" max_length="32" name="portfolio" reference="x_1285971_wealth_m_portfolio" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Resolved Date" max_length="40" name="resolved_date" type="glide_date_time"/>
+        <element default="true" label="Auto-Generated Alert" max_length="40" name="auto_generated" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Required Action" max_length="40" name="action_required" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Compliance Review" sequence="3" value="compliance_check"/>
+                <element inactive_on_update="false" label="Rebalance Portfolio" sequence="0" value="rebalance"/>
+                <element inactive_on_update="false" label="Risk Assessment" sequence="4" value="risk_assessment"/>
+                <element inactive_on_update="false" label="Review Asset Allocation" sequence="1" value="review_allocation"/>
+                <element inactive_on_update="false" label="No Action Required" sequence="5" value="no_action"/>
+                <element inactive_on_update="false" label="Contact Client" sequence="2" value="contact_client"/>
+            </choice>
+        </element>
+        <element label="Deviation (%)" max_length="8" name="deviation_percentage" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Related Security Symbol" max_length="20" name="security_symbol" type="string"/>
+        <element attributes="encode_utf8=false" label="Client" max_length="32" name="client" reference="x_1285971_wealth_m_client" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Alert Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Resolved" sequence="3" value="resolved"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Dismissed" sequence="4" value="dismissed"/>
+                <element inactive_on_update="false" label="Acknowledged" sequence="1" value="acknowledged"/>
+                <element inactive_on_update="false" label="Escalated" sequence="5" value="escalated"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in_progress"/>
+            </choice>
+        </element>
+        <element label="Notification Sent" max_length="40" name="notification_sent" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="SLA Due Date" max_length="40" name="sla_due_date" type="glide_date_time"/>
+        <element label="Threshold Value" max_length="15" name="threshold_value" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Alert Triggered Date" mandatory="true" max_length="40" name="triggered_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Alert Title" mandatory="true" max_length="200" name="title" type="string"/>
+        <element attributes="encode_utf8=false" label="Assigned Advisor" max_length="32" name="assigned_advisor" reference="sys_user" type="reference"/>
+        <element label="Client Notified" max_length="40" name="client_notified" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Resolution Notes" max_length="1000" name="resolution_notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Alert Type" mandatory="true" max_length="40" name="alert_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Compliance Issue" sequence="3" value="compliance_issue"/>
+                <element inactive_on_update="false" label="Benchmark Deviation" sequence="7" value="benchmark_deviation"/>
+                <element inactive_on_update="false" label="Market Volatility" sequence="4" value="market_volatility"/>
+                <element inactive_on_update="false" label="Suitability Mismatch" sequence="8" value="suitability_mismatch"/>
+                <element inactive_on_update="false" label="Rebalance Threshold Breach" sequence="0" value="rebalance_threshold"/>
+                <element inactive_on_update="false" label="Cash Level Alert" sequence="5" value="cash_level"/>
+                <element inactive_on_update="false" label="Performance Decline" sequence="1" value="performance_decline"/>
+                <element inactive_on_update="false" label="Fee Threshold Exceeded" sequence="6" value="fee_threshold"/>
+                <element inactive_on_update="false" label="Risk Level Increase" sequence="2" value="risk_increase"/>
+            </choice>
+        </element>
+        <element label="Current Value" max_length="15" name="current_value" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="medium" label="Priority" max_length="40" name="priority" type="string">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="1" value="high"/>
+                <element inactive_on_update="false" label="Medium" sequence="2" value="medium"/>
+                <element inactive_on_update="false" label="Low" sequence="3" value="low"/>
+                <element inactive_on_update="false" label="Critical" sequence="0" value="critical"/>
+                <element inactive_on_update="false" label="Informational" sequence="4" value="info"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Acknowledged Date" max_length="40" name="acknowledged_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Alert Description" max_length="1000" name="description" type="string"/>
+        <element default="0" label="Escalation Level" max_length="40" name="escalation_level" type="integer"/>
+        <index name="index">
+            <element name="assigned_advisor"/>
+        </index>
+        <index name="index2">
+            <element name="client"/>
+        </index>
+        <index name="index3">
+            <element name="portfolio"/>
+        </index>
+        <index name="index4">
+            <element name="triggered_date"/>
+        </index>
+    </element>
+</database>

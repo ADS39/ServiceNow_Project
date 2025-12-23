@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="424d5760c3c6f6504620e04bb0013151" label="Portfolio Transaction" max_length="40" name="x_1285971_wealth_m_transaction" type="collection">
+        <element label="Quantity/Shares" max_length="15" name="quantity" type="decimal"/>
+        <element default="0.00" label="Taxes (USD)" max_length="10" name="taxes" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Broker/Custodian" max_length="100" name="broker" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Security Name" max_length="200" name="security_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Transaction Notes" max_length="500" name="notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="pending" label="Transaction Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Executed" sequence="1" value="executed"/>
+                <element inactive_on_update="false" label="Settled" sequence="2" value="settled"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Failed" sequence="4" value="failed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Transaction Type" mandatory="true" max_length="40" name="transaction_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Buy" sequence="0" value="buy"/>
+                <element inactive_on_update="false" label="Cash Deposit" sequence="4" value="deposit"/>
+                <element inactive_on_update="false" label="Fee" sequence="8" value="fee"/>
+                <element inactive_on_update="false" label="Sell" sequence="1" value="sell"/>
+                <element inactive_on_update="false" label="Cash Withdrawal" sequence="5" value="withdrawal"/>
+                <element inactive_on_update="false" label="Rebalance" sequence="9" value="rebalance"/>
+                <element inactive_on_update="false" label="Dividend" sequence="2" value="dividend"/>
+                <element inactive_on_update="false" label="Transfer In" sequence="6" value="transfer_in"/>
+                <element inactive_on_update="false" label="Stock Split" sequence="10" value="split"/>
+                <element inactive_on_update="false" label="Interest" sequence="3" value="interest"/>
+                <element inactive_on_update="false" label="Transfer Out" sequence="7" value="transfer_out"/>
+                <element inactive_on_update="false" label="Merger" sequence="11" value="merger"/>
+            </choice>
+        </element>
+        <element label="Price per Share (USD)" max_length="12" name="price_per_share" type="decimal"/>
+        <element label="Net Amount (USD)" max_length="15" name="net_amount" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Transaction ID" mandatory="true" max_length="50" name="transaction_id" read_only="true" type="string"/>
+        <element label="Automated Transaction" max_length="40" name="is_automated" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Account Number" max_length="50" name="account_number" type="string"/>
+        <element attributes="encode_utf8=false" label="Portfolio" mandatory="true" max_length="32" name="portfolio" reference="x_1285971_wealth_m_portfolio" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Transaction Date" mandatory="true" max_length="40" name="transaction_date" type="glide_date_time"/>
+        <element label="Gross Amount (USD)" max_length="15" name="gross_amount" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="USD" label="Currency" max_length="10" name="currency" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Order Type" max_length="40" name="order_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Market" sequence="0" value="market"/>
+                <element inactive_on_update="false" label="Limit" sequence="1" value="limit"/>
+                <element inactive_on_update="false" label="Stop" sequence="2" value="stop"/>
+                <element inactive_on_update="false" label="Stop Limit" sequence="3" value="stop_limit"/>
+            </choice>
+        </element>
+        <element default="1.000000" label="Exchange Rate to USD" max_length="10" name="exchange_rate" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Security Symbol" max_length="20" name="security_symbol" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Settlement Date" max_length="40" name="settlement_date" type="glide_date_time"/>
+        <element default="0.00" label="Fees (USD)" max_length="10" name="fees" type="decimal"/>
+        <element attributes="encode_utf8=false" label="Executing Advisor" max_length="32" name="advisor" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Rebalance Batch ID" max_length="50" name="rebalance_batch_id" type="string"/>
+        <index name="index">
+            <element name="advisor"/>
+        </index>
+        <index name="index2">
+            <element name="portfolio"/>
+        </index>
+        <index name="index3">
+            <element name="transaction_date"/>
+        </index>
+    </element>
+</database>
