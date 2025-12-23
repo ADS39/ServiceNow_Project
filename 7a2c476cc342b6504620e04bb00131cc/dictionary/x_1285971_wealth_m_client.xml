@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="814dd360c3c6f6504620e04bb00131b2" label="Wealth Management Client" max_length="40" name="x_1285971_wealth_m_client" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Client ID" mandatory="true" max_length="50" name="client_id" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element attributes="encode_utf8=false" label="Preferred Financial Advisor" max_length="32" name="preferred_advisor" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Client Onboarding Date" max_length="40" name="onboarding_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="100" name="first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="100" name="last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="moderate" label="Risk Tolerance" max_length="40" name="risk_tolerance" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Aggressive" sequence="2" value="aggressive"/>
+                <element inactive_on_update="false" label="Conservative" sequence="0" value="conservative"/>
+                <element inactive_on_update="false" label="Moderate" sequence="1" value="moderate"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="prospective" label="Client Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Prospective" sequence="2" value="prospective"/>
+                <element inactive_on_update="false" label="Former" sequence="3" value="former"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Inactive" sequence="1" value="inactive"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Email Address" mandatory="true" max_length="200" name="email" type="string"/>
+        <element label="Net Worth (USD)" max_length="15" name="net_worth" type="decimal"/>
+        <element label="KYC Completed" max_length="40" name="kyc_completed" type="boolean"/>
+        <element label="AML Check Completed" max_length="40" name="aml_checked" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Phone Number" max_length="50" name="phone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Investment Experience" max_length="40" name="investment_experience" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Experienced (8-15 years)" sequence="2" value="experienced"/>
+                <element inactive_on_update="false" label="Expert (15+ years)" sequence="3" value="expert"/>
+                <element inactive_on_update="false" label="Beginner (0-2 years)" sequence="0" value="beginner"/>
+                <element inactive_on_update="false" label="Intermediate (3-7 years)" sequence="1" value="intermediate"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="preferred_advisor"/>
+        </index>
+    </element>
+</database>
