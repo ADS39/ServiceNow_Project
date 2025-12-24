@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order>100</order>
+        <roles>x_1285971_wealth_m.admin,x_1285971_wealth_m.advisor,x_1285971_wealth_m.user,x_1285971_wealth_m.portfolio_manager,x_1285971_wealth_m.operations,x_1285971_wealth_m.manager,admin</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-23 08:34:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9e2e13a4c3c6f6504620e04bb0013176</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Wealth Management Portfolios</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_app_application_9e2e13a4c3c6f6504620e04bb0013176</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:02:17</sys_updated_on>
+        <title>Wealth Management Portfolios</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</application>
+        <file_path/>
+        <instance_id>36d188871b8e3d5065324089bd4bcb73</instance_id>
+        <instance_name>dev195100</instance_name>
+        <name>sys_app_application_9e2e13a4c3c6f6504620e04bb0013176</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name/><order>100</order><roles>x_1285971_wealth_m.admin,x_1285971_wealth_m.advisor,x_1285971_wealth_m.user,x_1285971_wealth_m.portfolio_manager,x_1285971_wealth_m.operations,x_1285971_wealth_m.manager,admin</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-12-23 08:34:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9e2e13a4c3c6f6504620e04bb0013176</sys_id><sys_mod_count>4</sys_mod_count><sys_name>Wealth Management Portfolios</sys_name><sys_overrides/><sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package><sys_policy/><sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope><sys_update_name>sys_app_application_9e2e13a4c3c6f6504620e04bb0013176</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-12-24 06:02:17</sys_updated_on><title>Wealth Management Portfolios</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-1943517879</payload_hash>
+        <record_name>Wealth Management Portfolios</record_name>
+        <reverted_from/>
+        <source>98a47ba0c34ef6504620e04bb00131f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:02:17</sys_created_on>
+        <sys_id>d5f4cc81c3423e504620e04bb0013130</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b4ef379520000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:02:17</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>15f4cc81db423e5072571d8f71eac72f</update_guid>
+        <update_guid_history>15f4cc81db423e5072571d8f71eac72f:-1943517879,e5fbffbcba8efa50148584c22ad8b8f3:667754598,bcf7fb60c58ef6507fef08b807cdfcbe:-1943517879,77753be4fb4ef650e646fdd322abfa78:667754598,124e1ba4e0c6f650d72215ff27ed1bad:33559276</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Wealth Management Portfolios">6d96984dc3463e504620e04bb0013111</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 07:19:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>297fea281e8845a69520a3d7be644031</sys_id>
+        <sys_metadata>9e2e13a4c3c6f6504620e04bb0013176</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Wealth Management Portfolios</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_scope_delete display_value="">2d1161015da7406088d8ad766a042400</sys_scope_delete>
+        <sys_update_name>sys_app_application_9e2e13a4c3c6f6504620e04bb0013176</sys_update_name>
+        <sys_update_version display_value="sys_app_application_9e2e13a4c3c6f6504620e04bb0013176">d5f4cc81c3423e504620e04bb0013130</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:19:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

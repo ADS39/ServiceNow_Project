@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:21:29</sys_created_on>
+        <sys_id>aa598845c3823e504620e04bb0013174</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1285971_wealth_m_portfolio_manager_profile.x_1285971_wealth_m.portfolio_manager</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_security_acl display_value="x_1285971_wealth_m_portfolio_manager_profile">16598845c3823e504620e04bb0013146</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_aa598845c3823e504620e04bb0013174</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:02:19</sys_updated_on>
+        <sys_user_role display_value="x_1285971_wealth_m.portfolio_manager" name="x_1285971_wealth_m.portfolio_manager">8e38f5da51914f6a8b3f7a18727acee9</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</application>
+        <file_path/>
+        <instance_id>36d188871b8e3d5065324089bd4bcb73</instance_id>
+        <instance_name>dev195100</instance_name>
+        <name>sys_security_acl_role_aa598845c3823e504620e04bb0013174</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-12-24 06:21:29</sys_created_on><sys_id>aa598845c3823e504620e04bb0013174</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_1285971_wealth_m_portfolio_manager_profile.x_1285971_wealth_m.portfolio_manager</sys_name><sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package><sys_policy/><sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope><sys_security_acl display_value="x_1285971_wealth_m_portfolio_manager_profile">16598845c3823e504620e04bb0013146</sys_security_acl><sys_update_name>sys_security_acl_role_aa598845c3823e504620e04bb0013174</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-12-24 07:02:19</sys_updated_on><sys_user_role display_value="x_1285971_wealth_m.portfolio_manager" name="x_1285971_wealth_m.portfolio_manager">8e38f5da51914f6a8b3f7a18727acee9</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1194790397</payload_hash>
+        <record_name>x_1285971_wealth_m_portfolio_manager_profile.x_1285971_wealth_m.portfolio_manager</record_name>
+        <reverted_from/>
+        <source>98a47ba0c34ef6504620e04bb00131f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 07:02:19</sys_created_on>
+        <sys_id>20b2d80dc3063e504620e04bb00131ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b4f2a6ec00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:02:19</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2cb2d80d87063e50136a2fa577e0dcac</update_guid>
+        <update_guid_history>2cb2d80d87063e50136a2fa577e0dcac:-1194790397,6e5988454c823e50a5e0174e0dc482b8:-577829956</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1285971_wealth_m_portfolio_manager_profile.x_1285971_wealth_m.portfolio_manage">d266904dc3463e504620e04bb0013199</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 07:18:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>fa01e923964b450cad17540945437329</sys_id>
+        <sys_metadata>aa598845c3823e504620e04bb0013174</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1285971_wealth_m_portfolio_manager_profile.x_1285971_wealth_m.portfolio_manager</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_parent display_value="">16598845c3823e504620e04bb0013146</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_scope_delete display_value="">2d1161015da7406088d8ad766a042400</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_aa598845c3823e504620e04bb0013174</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_aa598845c3823e504620e04bb0013174">20b2d80dc3063e504620e04bb00131ae</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:18:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

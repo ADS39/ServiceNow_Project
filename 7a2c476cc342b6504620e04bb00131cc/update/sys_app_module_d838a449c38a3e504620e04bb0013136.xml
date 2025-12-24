@@ -10,32 +10,32 @@
         <image/>
         <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Wealth Management Workflow Task</mobile_title>
+        <mobile_title>Compliance Profiles</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_1285971_wealth_m_workflow_task</name>
-        <order>106</order>
+        <name>incident</name>
+        <order>111</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles>x_1285971_wealth_m.advisor,admin,x_1285971_wealth_m.admin,x_1285971_wealth_m.compliance,x_1285971_wealth_m.manager,x_1285971_wealth_m.portfolio_manager</roles>
+        <roles>admin,x_1285971_wealth_m.manager,x_1285971_wealth_m.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-12-23 09:09:44</sys_created_on>
+        <sys_created_on>2025-12-24 08:38:01</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>6706eb24c34af6504620e04bb0013186</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Wealth Management Workflow Task</sys_name>
+        <sys_id>d838a449c38a3e504620e04bb0013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Compliance Profiles</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
-        <sys_update_name>sys_app_module_6706eb24c34af6504620e04bb0013186</sys_update_name>
+        <sys_update_name>sys_app_module_d838a449c38a3e504620e04bb0013136</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-12-24 08:29:15</sys_updated_on>
+        <sys_updated_on>2025-12-24 08:38:01</sys_updated_on>
         <timeline_page/>
-        <title>Wealth Management Workflow Task</title>
+        <title>Compliance Profiles</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="notes" table="x_1285971_wealth_m_advisor_profile">
+        <active>true</active>
+        <array>false</array>
+        <attributes>edge_encryption_enabled=true</attributes>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Notes</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notes</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <name>x_1285971_wealth_m_advisor_profile</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:15:44</sys_created_on>
+        <sys_id>5e080401c3823e504620e04bb0013125</sys_id>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_dictionary_x_1285971_wealth_m_advisor_profile_notes</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:15:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</application>
+        <file_path/>
+        <instance_id>36d188871b8e3d5065324089bd4bcb73</instance_id>
+        <instance_name>dev195100</instance_name>
+        <name>sys_dictionary_x_1285971_wealth_m_advisor_profile_notes</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="notes" table="x_1285971_wealth_m_advisor_profile"><active>true</active><array>false</array><attributes>edge_encryption_enabled=true</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Notes</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>notes</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="">string_full_utf8</internal_type><mandatory>false</mandatory><max_length>255</max_length><name>x_1285971_wealth_m_advisor_profile</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-12-24 06:15:44</sys_created_on><sys_id>5e080401c3823e504620e04bb0013125</sys_id><sys_name>Notes</sys_name><sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package><sys_policy/><sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope><sys_update_name>sys_dictionary_x_1285971_wealth_m_advisor_profile_notes</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-12-24 06:15:44</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>-82822062</payload_hash>
+        <record_name>Advisor Profile.Notes</record_name>
+        <reverted_from/>
+        <source>98a47ba0c34ef6504620e04bb00131f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:15:44</sys_created_on>
+        <sys_id>de080401c3823e504620e04bb0013153</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b4effca5f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:15:44</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>1208040159823e50fecc38e01bde7b53</update_guid>
+        <update_guid_history>1208040159823e50fecc38e01bde7b53:-82822062</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 07:17:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>01c37f6534464cbabc2f6ae4f2476b81</sys_id>
+        <sys_metadata>5e080401c3823e504620e04bb0013125</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_parent display_value="">a0ef2b3cc3cafa504620e04bb00131c7</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_scope_delete display_value="">2d1161015da7406088d8ad766a042400</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1285971_wealth_m_advisor_profile_notes</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1285971_wealth_m_advisor_profile_notes">de080401c3823e504620e04bb0013153</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:17:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

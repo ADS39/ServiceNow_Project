@@ -15,15 +15,15 @@
         <element attributes="edge_encryption_enabled=true" label="Credit Rating" max_length="10" name="rating" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="stock" label="Security Type" max_length="40" name="security_type" type="string">
             <choice>
-                <element inactive_on_update="false" label="Mutual Fund" sequence="3" value="mutual_fund"/>
-                <element inactive_on_update="false" label="Option" sequence="7" value="option"/>
+                <element inactive="true" inactive_on_update="true" label="Mutual Fund" sequence="5" value="mutual_fund"/>
+                <element inactive="true" inactive_on_update="true" label="Option" sequence="3" value="option"/>
                 <element inactive_on_update="false" label="Stock" sequence="0" value="stock"/>
-                <element inactive_on_update="false" label="REIT" sequence="4" value="reit"/>
-                <element inactive_on_update="false" label="Cash Equivalent" sequence="8" value="cash"/>
-                <element inactive_on_update="false" label="Bond" sequence="1" value="bond"/>
-                <element inactive_on_update="false" label="Commodity" sequence="5" value="commodity"/>
-                <element inactive_on_update="false" label="ETF" sequence="2" value="etf"/>
-                <element inactive_on_update="false" label="Cryptocurrency" sequence="6" value="cryptocurrency"/>
+                <element inactive="true" inactive_on_update="true" label="REIT" sequence="4" value="reit"/>
+                <element inactive="true" inactive_on_update="true" label="Cash Equivalent" sequence="2" value="cash"/>
+                <element inactive="true" inactive_on_update="true" label="Bond" sequence="0" value="bond"/>
+                <element inactive="true" inactive_on_update="true" label="Commodity" sequence="1" value="commodity"/>
+                <element inactive_on_update="false" label="ETF" sequence="1" value="etf"/>
+                <element inactive_on_update="false" label="Cryptocurrency" sequence="2" value="cryptocurrency"/>
             </choice>
         </element>
         <element label="Total Cost Basis (USD)" max_length="15" name="total_cost_basis" type="decimal"/>

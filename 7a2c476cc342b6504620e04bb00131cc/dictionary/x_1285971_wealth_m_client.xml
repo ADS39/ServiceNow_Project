@@ -2,7 +2,6 @@
     <element audit="true" db_object_id="814dd360c3c6f6504620e04bb00131b2" label="Wealth Management Client" max_length="40" name="x_1285971_wealth_m_client" type="collection">
         <element attributes="edge_encryption_enabled=true" display="true" label="Client ID" mandatory="true" max_length="50" name="client_id" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Date of Birth" max_length="40" name="date_of_birth" type="glide_date"/>
-        <element attributes="encode_utf8=false" label="Preferred Financial Advisor" max_length="32" name="preferred_advisor" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Client Onboarding Date" max_length="40" name="onboarding_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="100" name="first_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="100" name="last_name" type="string"/>
@@ -34,8 +33,5 @@
                 <element inactive_on_update="false" label="Intermediate (3-7 years)" sequence="1" value="intermediate"/>
             </choice>
         </element>
-        <index name="index">
-            <element name="preferred_advisor"/>
-        </index>
     </element>
 </database>

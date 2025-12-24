@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Wealth Management Portfolios">9e2e13a4c3c6f6504620e04bb0013176</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint>All Advisor profiles make and view relted details</hint>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Advisor Profiles</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1285971_wealth_m_advisor_profile</name>
+        <order>107</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>admin,x_1285971_wealth_m.admin,x_1285971_wealth_m.advisor,x_1285971_wealth_m.manager,x_1285971_wealth_m.portfolio_manager</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 05:00:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>76f57374c34efa504620e04bb00131d5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Advisor Profile</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_app_module_76f57374c34efa504620e04bb00131d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:00:15</sys_updated_on>
+        <timeline_page/>
+        <title>Advisor Profile</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</application>
+        <file_path/>
+        <instance_id>36d188871b8e3d5065324089bd4bcb73</instance_id>
+        <instance_name>dev195100</instance_name>
+        <name>sys_app_module_76f57374c34efa504620e04bb00131d5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Wealth Management Portfolios">9e2e13a4c3c6f6504620e04bb0013176</application><assessment/><device_type/><filter/><hint>All Advisor profiles make and view relted details</hint><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Advisor Profiles</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1285971_wealth_m_advisor_profile</name><order>107</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>admin,x_1285971_wealth_m.admin,x_1285971_wealth_m.advisor,x_1285971_wealth_m.manager,x_1285971_wealth_m.portfolio_manager</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-12-24 05:00:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>76f57374c34efa504620e04bb00131d5</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Advisor Profile</sys_name><sys_overrides/><sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package><sys_policy/><sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope><sys_update_name>sys_app_module_76f57374c34efa504620e04bb00131d5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-12-24 06:00:15</sys_updated_on><timeline_page/><title>Advisor Profile</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>1934621536</payload_hash>
+        <record_name>Advisor Profile</record_name>
+        <reverted_from/>
+        <source>98a47ba0c34ef6504620e04bb00131f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:00:15</sys_created_on>
+        <sys_id>ab740441c3423e504620e04bb001314f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b4ef19d570000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:00:15</sys_updated_on>
+        <type>Module</type>
+        <update_guid>e77404419b423e50bfc1a985fdc2774e</update_guid>
+        <update_guid_history>e77404419b423e50bfc1a985fdc2774e:1934621536,40648c0129423e50f7bfd815fce1a75f:608933418,7ce67778f84efa5078763bb63a84323c:-1826566207</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Advisor Profile">2b1694c9c3463e504620e04bb001316d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 07:17:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>09be9db1daa249568cabacd0570b4ac4</sys_id>
+        <sys_metadata>76f57374c34efa504620e04bb00131d5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Advisor Profile</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_scope_delete display_value="">2d1161015da7406088d8ad766a042400</sys_scope_delete>
+        <sys_update_name>sys_app_module_76f57374c34efa504620e04bb00131d5</sys_update_name>
+        <sys_update_version display_value="sys_app_module_76f57374c34efa504620e04bb00131d5">ab740441c3423e504620e04bb001314f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:17:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

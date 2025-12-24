@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1285971_wealth_m.portfolio_manager_profile_user</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>portfolio_manager_profile_user</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:21:28</sys_created_on>
+        <sys_id>1e598845c3823e504620e04bb001313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1285971_wealth_m.portfolio_manager_profile_user</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_update_name>sys_user_role_1e598845c3823e504620e04bb001313b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:21:28</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</application>
+        <file_path/>
+        <instance_id>36d188871b8e3d5065324089bd4bcb73</instance_id>
+        <instance_name>dev195100</instance_name>
+        <name>sys_user_role_1e598845c3823e504620e04bb001313b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_1285971_wealth_m.portfolio_manager_profile_user</name><scoped_admin>false</scoped_admin><suffix>portfolio_manager_profile_user</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-12-24 06:21:28</sys_created_on><sys_id>1e598845c3823e504620e04bb001313b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1285971_wealth_m.portfolio_manager_profile_user</sys_name><sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package><sys_policy/><sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope><sys_update_name>sys_user_role_1e598845c3823e504620e04bb001313b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-12-24 06:21:28</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>69638513</payload_hash>
+        <record_name>x_1285971_wealth_m.portfolio_manager_profile_user</record_name>
+        <reverted_from/>
+        <source>98a47ba0c34ef6504620e04bb00131f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 06:21:28</sys_created_on>
+        <sys_id>96598845c3823e504620e04bb0013142</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b4f0509950000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 06:21:28</sys_updated_on>
+        <type>Role</type>
+        <update_guid>1659884556823e5094084a16e75e0141</update_guid>
+        <update_guid_history>1659884556823e5094084a16e75e0141:69638513</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1285971_wealth_m.portfolio_manager_profile_user">54c65c8dc3463e504620e04bb001311f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-24 07:20:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>3b732fcb9d1247109203253a65713884</sys_id>
+        <sys_metadata>1e598845c3823e504620e04bb001313b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1285971_wealth_m.portfolio_manager_profile_user</sys_name>
+        <sys_package display_value="Wealth Manag" source="x_1285971_wealth_m">7a2c476cc342b6504620e04bb00131cc</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Wealth Manag">7a2c476cc342b6504620e04bb00131cc</sys_scope>
+        <sys_scope_delete display_value="">2d1161015da7406088d8ad766a042400</sys_scope_delete>
+        <sys_update_name>sys_user_role_1e598845c3823e504620e04bb001313b</sys_update_name>
+        <sys_update_version display_value="sys_user_role_1e598845c3823e504620e04bb001313b">96598845c3823e504620e04bb0013142</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-24 07:20:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
